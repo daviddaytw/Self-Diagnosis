@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "./bin",
+    "./bin/**/*",
+    "./src/**/*",
+    "./package.json",
+    "./package-lock.json"
+  ],
+  "exclude": [],
+  "hooks": [
+    "copy-files"
+  ]
+}

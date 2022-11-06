@@ -1,0 +1,43 @@
+name: Publish Bot
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bot
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install npm packages
+      run: npm ci
+    - name: Compile TypeScript
+      run: npm run build
+
+    - name: Upload to server
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftp.registry.davidday.tw
+        username: ci@registry.davidday.tw
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: './bot/build/'
+        exclude: |
+          .env*
+
+    - name: Execute deployment script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+          source ~/nodevenv/Self-Diagosis/16/bin/activate && cd ~/Self-Diagosis
+          rm -r node_modules
+          npm install --production
