@@ -1,3 +1,4 @@
+import assert from 'assert'
 import axios from 'axios'
 import translatte from 'translatte'
 import { AppDataSource } from '../data-source'
@@ -7,18 +8,20 @@ import { User } from '../entity/User'
 export class TranslationHandler {
 
   private static async requestLocale (user: User): Promise<string> {
-    // The page access token we have generated in your app settings
-    const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN
+    try {
+      // The page access token we have generated in your app settings
+      const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN
 
-    // Send the HTTP request to the Messenger Platform
-    const res = await axios.get(`https://graph.facebook.com/${user.psid}?fields=locale&access_token=${PAGE_ACCESS_TOKEN}`)
+      // Send the HTTP request to the Messenger Platform
+      const res = await axios.get(`https://graph.facebook.com/${user.psid}?fields=locale&access_token=${PAGE_ACCESS_TOKEN}`)
 
-    // Use default if can not get locale.
-    if( res == undefined ) {
+      return res.data.locale
+    } catch (err) {
+      console.log("Can not get user's locale", err)
+
+      // Use default if can not get locale.
       return 'default'
     }
-
-    return res.data.locale
   }
 
   private static cleanLocaleString(locale: string): string {
