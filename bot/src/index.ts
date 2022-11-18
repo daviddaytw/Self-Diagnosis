@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 AppDataSource.initialize().then(async () => {
   app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!')
+    res.redirect('/index.html')
   })
 
   app.get('/webhook', async (req: Request, res: Response) => {
