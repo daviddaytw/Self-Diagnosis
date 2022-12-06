@@ -1,0 +1,581 @@
+{
+  "type": "entries",
+  "entries": {
+    "nausea": {
+      "type": "question",
+      "feature": "yellowing of eyes",
+      "Yes": {
+        "type": "question",
+        "feature": "fatigue",
+        "Yes": {
+          "type": "question",
+          "feature": "coma",
+          "Yes": {
+            "type": "result",
+            "severity": 20,
+            "probability": {
+              "Hepatitis E": 1.0
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "vomiting",
+            "Yes": {
+              "type": "result",
+              "severity": 18,
+              "probability": {
+                "Hepatitis D": 1.0
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 13,
+              "probability": {
+                "Hepatitis C": 0.9411764705882353,
+                "Hepatitis D": 0.058823529411764705
+              }
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "mild fever",
+          "Yes": {
+            "type": "result",
+            "severity": 14,
+            "probability": {
+              "hepatitis A": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 9,
+            "probability": {
+              "Chronic cholestasis": 0.8571428571428571,
+              "Hepatitis C": 0.047619047619047616,
+              "Hepatitis D": 0.047619047619047616,
+              "Hepatitis E": 0.047619047619047616
+            }
+          }
+        }
+      },
+      "No": {
+        "type": "question",
+        "feature": "muscle pain",
+        "Yes": {
+          "type": "question",
+          "feature": "pain behind the eyes",
+          "Yes": {
+            "type": "result",
+            "severity": 11,
+            "probability": {
+              "Dengue": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 7,
+            "probability": {
+              "Malaria": 1.0
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "chills",
+          "Yes": {
+            "type": "result",
+            "severity": 8,
+            "probability": {
+              "Typhoid": 0.95,
+              "Dengue": 0.05
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "palpitations",
+            "Yes": {
+              "type": "result",
+              "severity": 9,
+              "probability": {
+                "Hypoglycemia": 1.0
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 5,
+              "probability": {
+                "(vertigo) Paroymsal  Positional Vertigo": 0.8260869565217391,
+                "Hepatitis C": 0.08695652173913043,
+                "Chronic cholestasis": 0.043478260869565216,
+                "Hepatitis D": 0.043478260869565216
+              }
+            }
+          }
+        }
+      }
+    },
+    "loss of appetite": {
+      "type": "question",
+      "feature": "yellowing of eyes",
+      "Yes": {
+        "type": "question",
+        "feature": "fatigue",
+        "Yes": {
+          "type": "question",
+          "feature": "coma",
+          "Yes": {
+            "type": "result",
+            "severity": 19,
+            "probability": {
+              "Hepatitis E": 1.0
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "vomiting",
+            "Yes": {
+              "type": "result",
+              "severity": 17,
+              "probability": {
+                "Tuberculosis": 0.5294117647058824,
+                "Hepatitis D": 0.47058823529411764
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 12,
+              "probability": {
+                "Hepatitis B": 0.5,
+                "Hepatitis C": 0.4444444444444444,
+                "Hepatitis D": 0.027777777777777776,
+                "Tuberculosis": 0.027777777777777776
+              }
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "mild fever",
+          "Yes": {
+            "type": "result",
+            "severity": 13,
+            "probability": {
+              "hepatitis A": 0.95,
+              "Tuberculosis": 0.05
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 8,
+            "probability": {
+              "Chronic cholestasis": 0.8181818181818182,
+              "Hepatitis B": 0.045454545454545456,
+              "Hepatitis C": 0.045454545454545456,
+              "Hepatitis D": 0.045454545454545456,
+              "Hepatitis E": 0.045454545454545456
+            }
+          }
+        }
+      },
+      "No": {
+        "type": "question",
+        "feature": "muscle pain",
+        "Yes": {
+          "type": "question",
+          "feature": "pain behind the eyes",
+          "Yes": {
+            "type": "result",
+            "severity": 10,
+            "probability": {
+              "Dengue": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 6,
+            "probability": {}
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "chills",
+          "Yes": {
+            "type": "result",
+            "severity": 7,
+            "probability": {
+              "Dengue": 1.0
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "palpitations",
+            "Yes": {
+              "type": "result",
+              "severity": 8,
+              "probability": {}
+            },
+            "No": {
+              "type": "result",
+              "severity": 4,
+              "probability": {
+                "Chicken pox": 0.4634146341463415,
+                "Peptic ulcer diseae": 0.43902439024390244,
+                "Hepatitis C": 0.04878048780487805,
+                "Chronic cholestasis": 0.024390243902439025,
+                "Hepatitis D": 0.024390243902439025
+              }
+            }
+          }
+        }
+      }
+    },
+    "high fever": {
+      "type": "question",
+      "feature": "yellowing of eyes",
+      "Yes": {
+        "type": "question",
+        "feature": "fatigue",
+        "Yes": {
+          "type": "question",
+          "feature": "coma",
+          "Yes": {
+            "type": "result",
+            "severity": 22,
+            "probability": {
+              "Hepatitis E": 1.0
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "vomiting",
+            "Yes": {
+              "type": "result",
+              "severity": 20,
+              "probability": {
+                "Tuberculosis": 1.0
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 15,
+              "probability": {
+                "Tuberculosis": 1.0
+              }
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "mild fever",
+          "Yes": {
+            "type": "result",
+            "severity": 16,
+            "probability": {
+              "Tuberculosis": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 11,
+            "probability": {
+              "Hepatitis E": 1.0
+            }
+          }
+        }
+      },
+      "No": {
+        "type": "question",
+        "feature": "muscle pain",
+        "Yes": {
+          "type": "question",
+          "feature": "pain behind the eyes",
+          "Yes": {
+            "type": "result",
+            "severity": 13,
+            "probability": {
+              "Dengue": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 9,
+            "probability": {
+              "Malaria": 0.5,
+              "Common Cold": 0.5
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "chills",
+          "Yes": {
+            "type": "result",
+            "severity": 10,
+            "probability": {
+              "Typhoid": 0.5128205128205128,
+              "Pneumonia": 0.46153846153846156,
+              "Dengue": 0.02564102564102564
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "palpitations",
+            "Yes": {
+              "type": "result",
+              "severity": 11,
+              "probability": {}
+            },
+            "No": {
+              "type": "result",
+              "severity": 7,
+              "probability": {
+                "AIDS": 0.20212765957446807,
+                "Bronchial Asthma": 0.20212765957446807,
+                "Jaundice": 0.20212765957446807,
+                "Chicken pox": 0.20212765957446807,
+                "Impetigo": 0.18085106382978725,
+                "Pneumonia": 0.010638297872340425
+              }
+            }
+          }
+        }
+      }
+    },
+    "vomiting": {
+      "type": "question",
+      "feature": "yellowing of eyes",
+      "Yes": {
+        "type": "question",
+        "feature": "fatigue",
+        "Yes": {
+          "type": "question",
+          "feature": "coma",
+          "Yes": {
+            "type": "result",
+            "severity": 20,
+            "probability": {
+              "Hepatitis E": 1.0
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "vomiting",
+            "Yes": {
+              "type": "result",
+              "severity": 18,
+              "probability": {
+                "Tuberculosis": 0.5142857142857142,
+                "Hepatitis D": 0.4857142857142857
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 13,
+              "probability": {}
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "mild fever",
+          "Yes": {
+            "type": "result",
+            "severity": 14,
+            "probability": {
+              "hepatitis A": 0.95,
+              "Tuberculosis": 0.05
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 9,
+            "probability": {
+              "Chronic cholestasis": 0.9,
+              "Hepatitis D": 0.05,
+              "Hepatitis E": 0.05
+            }
+          }
+        }
+      },
+      "No": {
+        "type": "question",
+        "feature": "muscle pain",
+        "Yes": {
+          "type": "question",
+          "feature": "pain behind the eyes",
+          "Yes": {
+            "type": "result",
+            "severity": 11,
+            "probability": {
+              "Dengue": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 7,
+            "probability": {
+              "Malaria": 1.0
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "chills",
+          "Yes": {
+            "type": "result",
+            "severity": 8,
+            "probability": {
+              "Typhoid": 0.95,
+              "Dengue": 0.05
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "palpitations",
+            "Yes": {
+              "type": "result",
+              "severity": 9,
+              "probability": {
+                "Hypoglycemia": 1.0
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 5,
+              "probability": {
+                "Peptic ulcer diseae": 0.12666666666666668,
+                "Jaundice": 0.12666666666666668,
+                "Alcoholic hepatitis": 0.12666666666666668,
+                "(vertigo) Paroymsal  Positional Vertigo": 0.12666666666666668,
+                "GERD": 0.12,
+                "Gastroenteritis": 0.12,
+                "Paralysis (brain hemorrhage)": 0.12,
+                "Heart attack": 0.12,
+                "Chronic cholestasis": 0.006666666666666667,
+                "Hepatitis D": 0.006666666666666667
+              }
+            }
+          }
+        }
+      }
+    },
+    "fatigue": {
+      "type": "question",
+      "feature": "yellowing of eyes",
+      "Yes": {
+        "type": "question",
+        "feature": "fatigue",
+        "Yes": {
+          "type": "question",
+          "feature": "coma",
+          "Yes": {
+            "type": "result",
+            "severity": 19,
+            "probability": {
+              "Hepatitis E": 1.0
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "vomiting",
+            "Yes": {
+              "type": "result",
+              "severity": 17,
+              "probability": {
+                "Tuberculosis": 0.5142857142857142,
+                "Hepatitis D": 0.4857142857142857
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 12,
+              "probability": {
+                "Hepatitis B": 0.5,
+                "Hepatitis C": 0.4473684210526316,
+                "Hepatitis D": 0.02631578947368421,
+                "Tuberculosis": 0.02631578947368421
+              }
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "mild fever",
+          "Yes": {
+            "type": "result",
+            "severity": 13,
+            "probability": {}
+          },
+          "No": {
+            "type": "result",
+            "severity": 8,
+            "probability": {}
+          }
+        }
+      },
+      "No": {
+        "type": "question",
+        "feature": "muscle pain",
+        "Yes": {
+          "type": "question",
+          "feature": "pain behind the eyes",
+          "Yes": {
+            "type": "result",
+            "severity": 10,
+            "probability": {
+              "Dengue": 1.0
+            }
+          },
+          "No": {
+            "type": "result",
+            "severity": 6,
+            "probability": {
+              "Common Cold": 1.0
+            }
+          }
+        },
+        "No": {
+          "type": "question",
+          "feature": "chills",
+          "Yes": {
+            "type": "result",
+            "severity": 7,
+            "probability": {
+              "Typhoid": 0.5128205128205128,
+              "Pneumonia": 0.46153846153846156,
+              "Dengue": 0.02564102564102564
+            }
+          },
+          "No": {
+            "type": "question",
+            "feature": "palpitations",
+            "Yes": {
+              "type": "result",
+              "severity": 8,
+              "probability": {
+                "Hypoglycemia": 1.0
+              }
+            },
+            "No": {
+              "type": "result",
+              "severity": 4,
+              "probability": {
+                "Diabetes ": 0.14074074074074075,
+                "Jaundice": 0.14074074074074075,
+                "Chicken pox": 0.14074074074074075,
+                "Varicose veins": 0.14074074074074075,
+                "Hyperthyroidism": 0.14074074074074075,
+                "Bronchial Asthma": 0.13333333333333333,
+                "Hypothyroidism": 0.13333333333333333,
+                "Hepatitis C": 0.014814814814814815,
+                "Hepatitis D": 0.007407407407407408,
+                "Pneumonia": 0.007407407407407408
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

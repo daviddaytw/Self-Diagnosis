@@ -8,16 +8,12 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: bot
-
     steps:
     - uses: actions/checkout@v2
 
     - name: Install npm packages
       run: npm ci
-    - name: Compile TypeScript
+    - name: Build frontend bundle
       run: npm run build
 
     - name: Upload to server
@@ -26,9 +22,12 @@ jobs:
         server: ftp.davidday.tw
         username: self-diagnose@davidday.tw
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: './bot/build/'
         exclude: |
           .env*
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          vendor/**
 
     - name: Execute deployment script
       uses: appleboy/ssh-action@master
@@ -38,6 +37,13 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          source ~/nodevenv/Self-Diagosis/16/bin/activate && cd ~/Self-Diagosis
-          rm -r node_modules
-          npm install --production
+          cd ~/Self-Diagnosis
+          php artisan down
+
+          chmod -R 777 storage bootstrap/cache
+          rm -rf ./vendor
+          /opt/cpanel/composer/bin/composer install --optimize-autoloader --no-dev
+          
+          php artisan storage:link
+          php artisan migrate --force
+          php artisan up
