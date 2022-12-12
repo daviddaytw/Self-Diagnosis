@@ -17,6 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('fb_psid')->nullable();
             $table->string('line_uid')->nullable();
+            $table->date('birthday')->nullable();
+            $table->enum('sex', ['Male', 'Female', 'Other'])->nullable();
+            $table->boolean('family_cancer')->nullable();
+            $table->json('interest_disease')->default('[]');
             $table->timestamps();
         });
     }
