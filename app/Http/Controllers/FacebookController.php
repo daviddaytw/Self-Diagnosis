@@ -86,7 +86,7 @@ class FacebookController extends Controller implements PlatformInterface
         // Send the HTTP request to the Messenger Platform
         $response = Http::post("https://graph.facebook.com/v2.6/me/messages?access_token=$PAGE_ACCESS_TOKEN", $payload);
         Log::info('Sent Payload: '.json_encode($payload));
-        Log::info('Platform response status: '.$response->status());
+        Log::info('Messenger response status: '.$response->status());
     }
 
     /**

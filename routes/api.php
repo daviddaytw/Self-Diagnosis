@@ -18,3 +18,7 @@ Route::name('facebook.')->group(function () {
     Route::get('/facebook_webhook', [Controllers\FacebookController::class, 'verify'])->name('verify');
     Route::post('/facebook_webhook', [Controllers\FacebookController::class, 'process'])->name('process');
 });
+
+Route::name('line.')->group(function () {
+    Route::post('/line_webhook', [Controllers\LineController::class, 'process'])->name('process');
+});
