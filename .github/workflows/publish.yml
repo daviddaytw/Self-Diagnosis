@@ -1,4 +1,4 @@
-name: Publish Bot
+name: Publish Website
 
 on:
   push:
@@ -22,28 +22,5 @@ jobs:
         server: ftp.davidday.tw
         username: self-diagnose@davidday.tw
         password: ${{ secrets.FTP_PASSWORD }}
-        exclude: |
-          .env*
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          vendor/**
-
-    - name: Execute deployment script
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: |
-          cd ~/Self-Diagnosis
-          php artisan down
-
-          chmod -R 777 storage bootstrap/cache
-          rm -rf ./vendor
-          /opt/cpanel/composer/bin/composer install --optimize-autoloader --no-dev
-          
-          php artisan storage:link
-          php artisan migrate --force
-          php artisan up
+        local-dir: ./out/
+        dangerous-clean-slate: true
