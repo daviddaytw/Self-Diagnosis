@@ -28,7 +28,7 @@ export function DemoChat() {
     }
 
     return (
-        <div className="border border-gray-200 rounded-xl overflow-y-scroll" style={{ height: '80vh'}}>
+        <div className="border border-gray-200 rounded-xl overflow-y-scroll bg-white" style={{ height: '80vh'}}>
             <div className="flex items-center border-b shadow">
                 <div className="p-4">
                     <LogoImage />
