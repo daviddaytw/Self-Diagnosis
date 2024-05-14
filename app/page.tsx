@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { DemoChat } from "./components/DemoChat";
 
 export default function Home() {
