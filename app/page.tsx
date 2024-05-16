@@ -3,7 +3,7 @@ import { DemoChat } from "./components/DemoChat";
 export default function Home() {
   return (
     <main className="min-h-screen p-16">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <h1 className="text-4xl pb-6">Self-Diagnosis</h1>
 
@@ -15,7 +15,7 @@ export default function Home() {
               </p>
           </section>
         </div>
-        <div className="p-16">
+        <div className="p-8">
           <DemoChat />
         </div>
       </div>
