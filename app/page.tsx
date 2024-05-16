@@ -22,7 +22,7 @@ export default function Home() {
 
       <footer className="p-4 flex gap-2 justify-end">
             <div className="text-gray-500">Built with ❤️ by <a href="https://davidday.tw" className="text-sky-600" target="_blank">David Day</a></div>
-            <iframe src="https://ghbtns.com/github-btn.html?user=daviddaytw&repo=Self-Diagnosis&type=star&count=true" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=daviddaytw&repo=Self-Diagnosis&type=star&count=true" frameBorder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
         </footer>
     </main>
   );
